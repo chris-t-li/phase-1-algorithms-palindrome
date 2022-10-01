@@ -1,14 +1,17 @@
+// Solution 1
+// function isPalindrome(word) {
+//   return word === word.split("").reverse().join("") ? true : false ;
+// }
+
+// Solution 2
 function isPalindrome(word) {
-  // Write your algorithm here
-}
-
-/* 
-  Add your pseudocode here
-*/
-
-/*
-  Add written explanation of your solution here
-*/
+  for(i = 0; i < word.length/2; i++) {
+    if(word[i] !== word[word.length - 1 - i]) {
+      return false;
+      }
+    }
+    return true;
+  }
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
